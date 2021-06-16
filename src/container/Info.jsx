@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import '../styles/components/Info.css';
 
 export default function Info() {
@@ -23,8 +23,12 @@ export default function Info() {
           </form>
         </div>
         <div className="Information-buttons">
-          <div className="Information-back">Regresar</div>
-          <div className="Information-next">pagar</div>
+          <Link to={'/Checkout'}>
+            <div className="Information-back">Regresar</div>
+          </Link>
+          <Link to={'/Checkout/Payment'}>
+            <div className="Information-next">pagar</div>
+          </Link>
         </div>
       </div>
       <div className="Information-sidebar">

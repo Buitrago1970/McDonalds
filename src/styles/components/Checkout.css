@@ -16,6 +16,9 @@
   color: rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
+.Checkout-item .fas:hover {
+  color: #a00000;
+}
 .Checkout-item button {
   background-color: transparent;
   border: none;
