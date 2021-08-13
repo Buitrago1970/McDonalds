@@ -8,12 +8,14 @@ import Payment from '../container/Payment';
 import Success from '../container/Success';
 import NotFound from '../container/NotFound';
 import Layout from '../components/Layout.jsx';
-import AppContext from '../context/AppContext';
+import Appcontext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
+
 export default function App() {
-  const initialState = useInitialState();
+  const InitialState = useInitialState();
+
   return (
-    <AppContext.Provider value={initialState}>
+    <Appcontext.Provider value={InitialState}>
       <BrowserRouter>
         <Switch>
           <Layout>
@@ -26,6 +28,6 @@ export default function App() {
           </Layout>
         </Switch>
       </BrowserRouter>
-    </AppContext.Provider>
+    </Appcontext.Provider>
   );
 }
