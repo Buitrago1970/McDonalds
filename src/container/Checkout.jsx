@@ -33,7 +33,7 @@ const Checkout = () => {
         )}
 
         {cart.map((item, i) => (
-          <div className="Checkout-item">
+          <div className="Checkout-item" key={i}>
             <div className="Checkout-element">
               <h4>{item.title}</h4>
               <span>{`$${item.price}`}</span>
