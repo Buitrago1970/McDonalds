@@ -73,20 +73,18 @@ input {
 }
 .Information button {
   box-shadow: inset 0px 1px 0px 0px #bee2f9;
-  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
-  background-color: #63b8ee;
+  background: linear-gradient(to bottom, #c6ee63 5%, #cfb346 100%);
   border-radius: 6px;
-  border: 1px solid #3866a3;
+  border: 1px solid #c6ee63;
   display: inline-block;
   cursor: pointer;
-  color: #14396a;
+  color: #000000;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 24px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #7cacde;
-  width: 100%;
+  width: 20%;
   display: block;
   outline: none;
 }

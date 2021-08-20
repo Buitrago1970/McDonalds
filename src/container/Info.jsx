@@ -57,7 +57,7 @@ export default function Info() {
           <Link to={'/Checkout'}>
             <div className="Information-back">Regresar</div>
           </Link>
-          <button type="button" onClick={handleSubmit}>
+          <button className="santeria" onClick={handleSubmit}>
             Pagar
           </button>
         </div>
