@@ -1,0 +1,172 @@
+$head-font = 'Montserrat', sans-serif
+$main-font = 'Open Sans', sans-serif
+$main-color = rgba(76,175,80,1)
+
+
+animated(name, duration)
+  -webkit-animation name duration
+  -moz-animation name duration
+  -o-animation name duration
+  animation name duration
+	
+borderRadius(r)
+	-webkit-border-radius r
+	-moz-border-radius r
+	border-radius r
+
+transformation(s)
+		-ms-transform scale(s, s)
+		-webkit-transform scale(s, s)
+		transform scale(s, s)
+	
+transitions(t)
+	-webkit-transition all t ease-in-out
+	transition all t ease-in-out
+
+// html, body {
+// 	height: 100%;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+
+// body
+// 	overflow hidden
+&.success{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+	}
+
+.modalbox
+	&.success,
+	&.error
+	
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+		borderRadius(2px)
+		background white
+		padding 25px 25px 15px
+		//border 1px solid #ddd
+		text-align center
+		
+		&.animate
+			//animated(plunge, 1s)
+			.icon
+				animated(fall-in, .75s)
+				box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+				//animation-delay .6s
+		h1
+			font-family $head-font
+		span
+			font-family $main-font
+			color: #727272
+			font-size: 15px
+		button,
+		button:active,
+		button:focus
+			transitions(.1s)
+			borderRadius(30px)
+			margin-top 15px
+			width 100%
+			background transparent
+			color $main-color
+			border: 2px solid $main-color;
+			outline none
+			padding: 9px
+			&:hover
+				color white
+				background $main-color
+				border-color transparent
+		.icon
+			position relative
+			margin 0 auto
+			margin-top -75px
+			background $main-color
+			height 100px
+			width 100px
+			border-radius 50%
+			span
+				postion absolute
+				font-size 4em
+				color white
+				text-align center
+				padding-top 20px
+	.p-mail-success{
+
+	}
+	
+	/* stupid browser compat. smh */
+@-webkit-keyframes fall-in
+	0%
+		transformation(3)
+		opacity 0
+	50%
+		transformation(1)
+		opacity 1
+	60%
+		transformation(1.1)
+	100%
+		transformation(1)
+		
+@-moz-keyframes fall-in
+	0%
+		transformation(3)
+		opacity 0
+	50%
+		transformation(1)
+		opacity 1
+	60%
+		transformation(1.1)
+	100%
+		transformation(1)
+
+@-o-keyframes fall-in
+	0%
+		transformation(3)
+		opacity 0
+	50%
+		transformation(1)
+		opacity 1
+	60%
+		transformation(1.1)
+	100%
+		transformation(1)
+
+@keyframes fall-in
+	0%
+		transformation(3)
+		opacity 0
+	50%
+		transformation(1)
+		opacity 1
+	60%
+		transformation(1.1)
+	100%
+		transformation(1)
+
+// currently not using plunge.
+@-webkit-keyframes plunge
+	0%
+		margin-top -100%
+	100%
+		margin-top 25%
+		
+@-moz-keyframes plunge
+	0%
+		margin-top -100%
+	100%
+		margin-top 25%
+
+@-o-keyframes plunge
+	0%
+		margin-top -100%
+	100%
+		margin-top 25%
+
+@keyframes plunge
+	0%
+		margin-top -100%
+	100%
+		margin-top 15%

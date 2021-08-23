@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useHistory } from 'react-router';
 import AppContext from '../context/AppContext';
 import { PayPalButton } from 'react-paypal-button-v2';
 import { handleSumTotal } from '../utils/index';
@@ -6,9 +7,10 @@ import { handleSumTotal } from '../utils/index';
 import '../styles/components/Payment.css';
 
 export default function Payment() {
-  const { state } = useContext(AppContext);
-  const { cart } = state;
+  const { state, addNewOrder } = useContext(AppContext);
+  const { cart, buyer } = state;
   const Total = handleSumTotal(cart);
+  const history = useHistory();
 
   return (
     <div className="Payment">
@@ -32,15 +34,13 @@ export default function Payment() {
         <h3>{`Precio Total: $${Total}`}</h3>
       </div>
       <PayPalButton
-        // amount={Total}
-        // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
         createOrder={(data, actions, error) => {
           return actions.order.create({
             purchase_units: [
               {
                 intent: 'CAPTURE',
                 amount: {
-                  currency_code: 'COP',
+                  currency_code: 'USD',
                   value: Total,
                 },
               },
@@ -48,12 +48,22 @@ export default function Payment() {
           });
         }}
         onSuccess={(details, data) => {
+          const order = await actions.order.capture();
+          const newOrder = {
+            buyer,
+            payment: details,
+            order: data,
+          };
+          history.push('/checkout/success');
+          addNewOrder(newOrder);
           alert('Transaction completed by ' + details.payer.name.given_name);
         }}
-        // catchError
-        // onCancel
+        options={{
+          clientId: process.env.CLIENT_ID_PP,
+        }}
+        catchError={(error) => console.log(error)}
+        onCancel={(data) => console.log(data)}
       />
-      <div></div>
     </div>
   );
 }
