@@ -35,14 +35,13 @@ transitions(t)
 &.success{
 	display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    margin: 20px 0;
+    align-content: center;
 	}
 
 .modalbox
 	&.success,
-	&.error
 	
 		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 		borderRadius(2px)
@@ -93,9 +92,8 @@ transitions(t)
 				color white
 				text-align center
 				padding-top 20px
-	.p-mail-success{
+	
 
-	}
 	
 	/* stupid browser compat. smh */
 @-webkit-keyframes fall-in
@@ -170,3 +168,4 @@ transitions(t)
 		margin-top -100%
 	100%
 		margin-top 15%
+		

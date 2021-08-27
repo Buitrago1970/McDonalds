@@ -3,14 +3,14 @@ import AppContext from '../context/AppContext';
 import { Link } from 'react-router-dom';
 
 import '../styles/components/Header.css';
-
+import mclogo from '../images/mcdonalds-logo.png';
 export default function Header() {
   const { state } = useContext(AppContext);
   const { cart } = state;
   return (
     <div className="Header">
       <Link to={'/'}>
-        <h1 className="Header-title">PlatziConf Merch</h1>
+        <img className="logo" src={`${mclogo}`} alt="" />
       </Link>
       <Link to={'/Checkout'}>
         <div className="Header-checkout">

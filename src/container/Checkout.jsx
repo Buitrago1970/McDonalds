@@ -21,7 +21,9 @@ const Checkout = () => {
           <>
             <h3>No has agregado ningun pedido</h3>
             <Link to={'/'}>
-              <button type="button">Ir al HOME</button>
+              <button className="Checkout-sidebar button" type="button">
+                Ir al HOME
+              </button>
             </Link>
           </>
         )}

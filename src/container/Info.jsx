@@ -14,12 +14,8 @@ export default function Info() {
     const formData = new FormData(form.current);
     const buyer = {
       name: formData.get('name'),
-      email: formData.get('email'),
       addres: formData.get('addres'),
-      apto: formData.get('apto'),
       city: formData.get('city'),
-      country: formData.get('country'),
-      state: formData.get('state'),
       cp: formData.get('cp'),
       phone: formData.get('phone'),
     };
@@ -43,12 +39,8 @@ export default function Info() {
         <div className="Information-form">
           <form ref={form}>
             <input type="text" placeholder="Nombre completo" name="name" />
-            <input type="text" placeholder="Correo Electronico" name="email" />
             <input type="text" placeholder="Direccion" name="addres" />
-            <input type="text" placeholder="apto" name="apto" />
             <input type="text" placeholder="Ciudad" name="city" />
-            <input type="text" placeholder="Pais" name="country" />
-            <input type="text" placeholder="Estado" name="state" />
             <input type="text" placeholder="Codigo postal" name="cp" />
             <input type="text" placeholder="Telefono" name="phone" />
           </form>
@@ -57,9 +49,12 @@ export default function Info() {
           <Link to={'/Checkout'}>
             <div className="Information-back">Regresar</div>
           </Link>
-          <button className="santeria" onClick={handleSubmit}>
-            Pagar
-          </button>
+          {/* <button className="santeria" onClick={handleSubmit}>
+          Ir a pagar
+          </button> */}
+          <Link to={'/checkout/payment'} className="saltar-pago">
+            Ir a pagar
+          </Link>
         </div>
       </div>
       <div className="Information-sidebar">

@@ -41,6 +41,21 @@ module.exports = {
           'stylus-loader',
         ],
       },
+      {
+        test: /\.png|jpg/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [

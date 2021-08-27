@@ -48,7 +48,6 @@ export default function Payment() {
           });
         }}
         onSuccess={(details, data) => {
-          const order = await actions.order.capture();
           const newOrder = {
             buyer,
             payment: details,
@@ -56,13 +55,16 @@ export default function Payment() {
           };
           history.push('/checkout/success');
           addNewOrder(newOrder);
-          alert('Transaction completed by ' + details.payer.name.given_name);
         }}
         options={{
           clientId: process.env.CLIENT_ID_PP,
         }}
         catchError={(error) => console.log(error)}
-        onCancel={(data) => console.log(data)}
+        onCancel={(data) =>
+          alert(
+            'Uy parece que hubo un error, bueno igual vamos a enviar su pedido. '
+          )
+        }
       />
     </div>
   );

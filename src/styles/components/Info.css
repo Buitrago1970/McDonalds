@@ -4,6 +4,7 @@
   grid-row-gap: 1.5em;
   display: grid;
   margin: 0 0 4em 0;
+  margin-top: 60px;
 }
 .Information-buttons {
   display: flex;
@@ -73,9 +74,9 @@ input {
 }
 .Information button {
   box-shadow: inset 0px 1px 0px 0px #bee2f9;
-  background: linear-gradient(to bottom, #c6ee63 5%, #cfb346 100%);
+  background: #eada37;
   border-radius: 6px;
-  border: 1px solid #c6ee63;
+  border: none;
   display: inline-block;
   cursor: pointer;
   color: #000000;
@@ -87,4 +88,10 @@ input {
   width: 20%;
   display: block;
   outline: none;
+}
+.saltar-pago {
+  padding: 5px;
+  background: #eada37;
+  border-radius: 6px;
+  color: #000000;
 }

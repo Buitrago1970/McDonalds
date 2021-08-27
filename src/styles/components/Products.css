@@ -1,3 +1,10 @@
+.Products {
+  padding-top: 20px;
+  background-image: url(../../images/headerbottom-home-v2.jpg);
+  background-repeat: no-repeat;
+  justify-content: center;
+  display: flex;
+}
 .Products-items {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
@@ -6,24 +13,26 @@
 }
 .Products-item {
   text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-    1px 3px 8px rgba(39, 44, 49, 0.03);
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 0%), 0px 0px 8px rgb(39 44 49 / 24%);
   border-radius: 5px;
   margin: 0 0 20px 0;
   position: relative;
 }
 .Products-item-info {
+  padding-top: 0;
   padding: 10px;
+  text-align: center;
+  min-height: 161px;
 }
 .Products-item-info h2 {
-  font-size: 18px;
+  font-size: 21px;
   font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  text-transform: unset;
+  min-height: 55px;
 }
-.Products-item-info h2 span {
-  color: #33b13a;
-}
+
 .Products-item-info p {
   font-size: 14px;
   font-weight: 300;
@@ -35,7 +44,7 @@
   object-fit: contain;
 }
 .Products-item button {
-  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+  background: #f6bb33;
   width: 100%;
   padding: 10px;
   border-radius: 0px 0px 5px 5px;
@@ -46,5 +55,5 @@
   font-weight: 300;
 }
 .Products-item button:hover {
-  background-color: rgba(39, 44, 49, 0.06);
+  background-color: #dca21b;
 }

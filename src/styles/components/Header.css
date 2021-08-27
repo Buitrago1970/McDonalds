@@ -1,6 +1,7 @@
 .Header {
   display: flex;
   justify-content: space-between;
+  height: 50px;
 }
 .Header-checkout {
   display: flex;
@@ -11,12 +12,22 @@
   margin: 0 0 0 0.5em;
 }
 .Header-alert {
-  color: #33b1ff;
-
-  font-size: 14px;
+  color: #bb473e;
+  font-size: 15px;
+  font-weight: 900;
   margin-left: 5px;
 }
 .Header a {
   text-decoration: none;
-  color: #33b1ff;
+  color: #bbbbbb;
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+}
+.Header a:hover {
+  color: #9b9b9b;
+}
+.logo {
+  position: absolute;
+  z-index: 2000;
 }
