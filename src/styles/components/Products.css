@@ -43,17 +43,27 @@
   border-radius: 5px 5px 0 0;
   object-fit: contain;
 }
-.Products-item button {
-  background: #f6bb33;
-  width: 100%;
-  padding: 10px;
+.button-add-cart {
   border-radius: 0px 0px 5px 5px;
-  border: 0px;
-  outline: 0;
   cursor: pointer;
   font-size: 14px;
   font-weight: 300;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 2px solid rgb(27, 44, 152);
+  padding: 15px;
+  background-image: initial;
+  background-color: rgba(2, 8, 47, 0.65);
+  box-shadow: rgb(7 15 65) 0px 20px 50px;
+  border-color: rgb(27, 44, 152);
+  color: rgb(237, 235, 232);
 }
-.Products-item button:hover {
-  background-color: #dca21b;
+.button-add-cart:hover {
+  border: 2px solid rgb(30, 46, 153);
+  padding: 15px;
+  background-image: initial;
+  background-color: rgba(5, 16, 77, 0.65);
+  border-color: rgb(32, 49, 157);
+  color: rgb(237, 235, 232);
 }

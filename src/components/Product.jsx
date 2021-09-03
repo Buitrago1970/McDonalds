@@ -9,7 +9,11 @@ const Product = ({ product, handleAddToCart }) => {
         <p>{product.description}</p>
       </div>
 
-      <button onClick={() => handleAddToCart(product)} type="button">
+      <button
+        className="button-add-cart"
+        onClick={() => handleAddToCart(product)}
+        type="button"
+      >
         Comprar
       </button>
     </div>

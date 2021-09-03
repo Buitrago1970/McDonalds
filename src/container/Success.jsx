@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import AppContext from '../context/AppContext';
 import '../styles/components/Success.styl';
-import '../styles/components/Success.css';
+// import '../styles/components/Success.css';
 
 export default function Success() {
   const { state } = useContext(AppContext);

@@ -2,6 +2,14 @@ export default {
   cart: [],
   buyer: [],
   order: [],
+  hero: [
+    {
+      id: '120',
+      title: 'hero-img',
+      image:
+        'https://www.mcdonalds.com/is/image/content/dam/usa/nfl/assets/carousel/Carousel-Desktop_Hero_1168x520.jpg?$Publication_One_Column_Desktop$',
+    },
+  ],
   products: [
     {
       id: '1',

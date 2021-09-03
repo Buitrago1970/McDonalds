@@ -26,7 +26,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer nofollow"
         >
-          <img className="icon-media" src={jb} alt="colmbian Heart" />
+          {/* <img className="icon-media" src={jb} alt="colmbian Heart" /> */}
         </a>
         <a
           className="footer-button github"
