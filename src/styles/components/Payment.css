@@ -1,5 +1,5 @@
 .Payment {
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
   display: grid;
@@ -32,4 +32,9 @@
 }
 .Payment-element h4 {
   margin: 0;
+}
+@media (max-width: 650px) {
+  .Payment {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,7 +1,9 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  padding: 0 50px;
+  align-items: center;
+  margin-bottom: 50px;
 }
 .Header-checkout {
   display: flex;
@@ -28,6 +30,4 @@
   color: #9b9b9b;
 }
 .logo {
-  position: absolute;
-  z-index: 2000;
 }

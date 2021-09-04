@@ -5,7 +5,7 @@ import AppContext from '../context/AppContext.js';
 import '../styles/Home.css';
 export default function Home() {
   const { state } = useContext(AppContext);
-  const { hero } = state;
+  const { assets } = state;
   return (
     <>
       <div className="hero">
@@ -16,7 +16,7 @@ export default function Home() {
           }
         </div>
         <div className="container-img-hero">
-          {<img src={hero[0].image} alt="" />}
+          {<img src={assets[0].image} alt="" />}
         </div>
       </div>
       <Products />

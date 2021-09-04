@@ -5,6 +5,8 @@ import { PayPalButton } from 'react-paypal-button-v2';
 import { handleSumTotal } from '../utils/index';
 
 import '../styles/components/Payment.css';
+import '../styles/components/OpcionesPago.css';
+import Bill from '../components/Bill';
 
 export default function Payment() {
   const { state, addNewOrder } = useContext(AppContext);
@@ -14,24 +16,64 @@ export default function Payment() {
 
   return (
     <div className="Payment">
-      <div className="Payment-content">
-        <h3>Resumen del pedido:</h3>
-        {cart.map((item, i) => (
-          <div className="Checkout-item" key={i}>
-            <div className="Checkout-element">
-              <h4>{item.title}</h4>
-              <span>{`$${item.price}`}</span>
+      <Bill />
+
+      <div className="pagos">
+        <h2>¿Cómo quieres pagar?</h2>
+        <ul className="opciones-pago">
+          <li className="opcion-pago">
+            <div>
+              <label className="ui-label">
+                <div className="ui-element">
+                  <input className="ui-radio__input" type="radio" />
+                </div>
+                <div className="ui-text">
+                  <span>💵</span>
+                  <span>Efectivo</span>
+                </div>
+              </label>
             </div>
-            <button
-              onClick={() => handleDeleteItem(item, i)}
-              type="button"
-              title="Eliminar"
-            >
-              <i className="fas fa-trash-alt" />
-            </button>
-          </div>
-        ))}
-        <h3>{`Precio Total: $${Total}`}</h3>
+          </li>
+          <li className="opcion-pago">
+            <div>
+              <label className="ui-label">
+                <div className="ui-element">
+                  <input className="ui-radio__input" type="radio" />
+                </div>
+                <div className="ui-text">
+                  <span>💵</span>
+                  <span>Tarjeta de Crédito - Débito (Presencial)</span>
+                </div>
+              </label>
+            </div>
+          </li>
+          <li className="opcion-pago">
+            <div>
+              <label className="ui-label">
+                <div className="ui-element">
+                  <input className="ui-radio__input" type="radio" />
+                </div>
+                <div className="ui-text">
+                  <span>💵</span>
+                  <span>Paypal</span>
+                </div>
+              </label>
+            </div>
+          </li>
+          <li className="opcion-pago">
+            <div>
+              <label className="ui-label">
+                <div className="ui-element">
+                  <input className="ui-radio__input" type="radio" />
+                </div>
+                <div className="ui-text">
+                  <span>💵</span>
+                  <span>Tarjeta Crédito - Débito 🟢(linea)</span>
+                </div>
+              </label>
+            </div>
+          </li>
+        </ul>
       </div>
       <PayPalButton
         createOrder={(data, actions, error) => {
@@ -59,11 +101,11 @@ export default function Payment() {
         options={{
           clientId: process.env.CLIENT_ID_PP,
         }}
-        catchError={(error) => console.log(error)}
+        catchError={(error) =>
+          alert(`Parece que hubo un error ${error} Vuelva a intentar.`)
+        }
         onCancel={(data) =>
-          alert(
-            'Uy parece que hubo un error, bueno igual vamos a enviar su pedido. '
-          )
+          alert('Parece que hubo un error. Vuelva a intentar.')
         }
       />
     </div>

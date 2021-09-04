@@ -1,13 +1,28 @@
 export default {
-  cart: [],
+  cart: [
+    {
+      id: '1',
+      image:
+        'https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/sandwiches-de-carne/ClubHouse.png',
+      title: 'CLUB HOUSE',
+      price: 25,
+      description: '',
+    },
+  ],
   buyer: [],
   order: [],
-  hero: [
+  assets: [
     {
       id: '120',
       title: 'hero-img',
       image:
         'https://www.mcdonalds.com/is/image/content/dam/usa/nfl/assets/carousel/Carousel-Desktop_Hero_1168x520.jpg?$Publication_One_Column_Desktop$',
+    },
+    {
+      id: '121',
+      title: 'logo-bill',
+      image:
+        'https://w7.pngwing.com/pngs/532/152/png-transparent-mcdonalds-logo-logo-brand-letter-initial-business-mcdonalds-logo-company-text-number.png',
     },
   ],
   products: [
