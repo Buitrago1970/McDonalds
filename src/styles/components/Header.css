@@ -10,7 +10,6 @@
   justify-content: space-evenly;
   align-items: center;
   justify-items: center;
-  width: 30px;
   margin: 0 0 0 0.5em;
 }
 .Header-alert {
@@ -30,4 +29,15 @@
   color: #9b9b9b;
 }
 .logo {
+  width: 110px;
+}
+.logo img {
+  width: 100%;
+}
+.icon-basket {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+.icon-basket:hover {
+  color: rgb(235, 63, 163);
 }

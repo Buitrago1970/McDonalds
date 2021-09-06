@@ -32,7 +32,11 @@ export default function Payment() {
                 </span>
               </div>
               <div className="x">
-                <button className="button-pago" type="button">
+                <button
+                  onClick={() => alert('xd')}
+                  className="button-pago"
+                  type="button"
+                >
                   Pagar en Efectvo{' '}
                 </button>
               </div>
