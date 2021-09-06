@@ -33,7 +33,12 @@
 .Payment-element h4 {
   margin: 0;
 }
-@media (max-width: 650px) {
+@media (max-width: 800px) {
+  .Payment {
+    grid-gap: 1rem;
+  }
+}
+@media (max-width: 670px) {
   .Payment {
     grid-template-columns: 1fr;
   }
