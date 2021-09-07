@@ -1,14 +1,5 @@
 export default {
-  cart: [
-    {
-      id: '1',
-      image:
-        'https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/CO/sandwiches-de-carne/ClubHouse.png',
-      title: 'CLUB HOUSE',
-      price: 25,
-      description: '',
-    },
-  ],
+  cart: [],
   buyer: [],
   order: [],
   assets: [

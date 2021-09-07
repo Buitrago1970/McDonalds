@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
@@ -9,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/',
+    clean: true,
   },
 
   resolve: {
@@ -73,5 +76,9 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
     port: 3005,
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [`...`, new TerserPlugin()],
   },
 };
