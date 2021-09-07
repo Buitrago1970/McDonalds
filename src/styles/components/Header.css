@@ -1,9 +1,12 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 10px;
   align-items: center;
   margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .Header-checkout {
   display: flex;

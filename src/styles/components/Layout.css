@@ -13,3 +13,42 @@ body {
   display: grid;
   justify-content: center;
 }
+h2 {
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+h3 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: #000;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  margin: 50px;
+  padding: 10px;
+}
+/* fondo  */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* color bar */
+::-webkit-scrollbar-thumb {
+  background: rgb(221, 255, 0);
+  border-radius: 4px;
+}
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff0000;
+  box-shadow: 0 0 2px 1px #00000033;
+}

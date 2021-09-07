@@ -23,35 +23,6 @@
   box-shadow: 0 0 0.5rem #b1e5fa, inset 0 0 0.5rem #fb6e9d, 0 0 2rem #fd688f,
     inset 0 0 2rem #aee7fb, 0 0 4rem #b9c5ee, inset 0 0 4rem #fd6992;
 }
-h2 {
-  margin: 0 0 8px 0;
-  padding: 0;
-}
-h3 {
-  font-size: 18px;
-  margin: 0 0 8px 0;
-  padding: 0;
-}
-::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 10px;
-  margin: 50px;
-  padding: 10px;
-}
-/* fondo  */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-/* color bar */
-::-webkit-scrollbar-thumb {
-  background: rgb(221, 255, 0);
-  border-radius: 4px;
-}
-/* hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #ff0000;
-  box-shadow: 0 0 2px 1px #00000033;
-}
 
 @media (max-width: 750px) {
   .hero {

@@ -11,13 +11,6 @@
   border-radius: 7px;
   background: rgb(255, 255, 255);
 }
-ul {
-  padding: 0;
-}
-li {
-  list-style: none;
-  color: #000;
-}
 .ui-text {
   text-align: left;
   padding: 10px;
