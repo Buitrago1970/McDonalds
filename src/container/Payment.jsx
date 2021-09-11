@@ -33,7 +33,12 @@ export default function Payment() {
               </div>
               <div className="x">
                 <button
-                  onClick={() => alert('xd')}
+                  onClick={() =>
+                    alert(
+                      `Su pago está siendo redirigido a
+                        ${Math.floor(Math.random() * 100)}JSBC7K06PJTIH6777`
+                    )
+                  }
                   className="button-pago"
                   type="button"
                 >
