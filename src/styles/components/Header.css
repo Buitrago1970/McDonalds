@@ -29,12 +29,13 @@
   justify-content: center;
   display: flex;
   font-size: 15px;
+  max-width: 140;
 }
 .Header a:hover {
   color: #9b9b9b;
 }
 .logo {
-  width: 110px;
+  max-width: 140;
 }
 .logo img {
   width: 100%;
