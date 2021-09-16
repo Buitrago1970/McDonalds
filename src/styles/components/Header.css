@@ -8,7 +8,8 @@
   top: 0;
   z-index: 10;
   position: -webkit-stick;
-  background: #ff572230;
+  background: rgb(255 255 255 / 10%);
+  border-radius: 0 0 15px 15px;
 }
 .Header-checkout {
   display: flex;
@@ -29,7 +30,7 @@
   justify-content: center;
   display: flex;
   font-size: 15px;
-  max-width: 140;
+  max-width: 120px;
 }
 .Header a:hover {
   color: #9b9b9b;
