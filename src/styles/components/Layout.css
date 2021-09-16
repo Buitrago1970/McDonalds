@@ -44,11 +44,11 @@ li {
 }
 /* color bar */
 ::-webkit-scrollbar-thumb {
-  background: #d400ff;
+  background: #f0ce3b;
   border-radius: 4px;
 }
 /* hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(140, 0, 255);
+  background: #a00000;
   box-shadow: 0 0 2px 1px #ff000033;
 }
