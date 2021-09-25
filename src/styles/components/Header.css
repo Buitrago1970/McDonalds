@@ -8,7 +8,7 @@
   top: 0;
   z-index: 10;
   position: -webkit-stick;
-  background: rgb(255 255 255 / 10%);
+  background: #2f2f2f59;
   border-radius: 0 0 15px 15px;
 }
 .Header-checkout {
@@ -35,8 +35,8 @@
 .Header a:hover {
   color: #9b9b9b;
 }
-.logo {
-  max-width: 140;
+.logo-container {
+  max-width: 140px;
 }
 .logo img {
   width: 100%;
@@ -47,4 +47,13 @@
 }
 .icon-basket:hover {
   color: rgb(235, 63, 163);
+}
+@media (max-width: 650px) {
+  .Header {
+    border-radius: 0 0 10px 10px;
+    background: #ffffff6e;
+  }
+  .logo-container {
+    max-width: 100px;
+  }
 }

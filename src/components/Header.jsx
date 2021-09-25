@@ -10,9 +10,13 @@ export default function Header() {
   const { cart } = state;
   return (
     <div className="Header">
+      <div className="logo-container">
+
       <Link className="logo" to={'/'}>
         <img src={`${mclogo}`} alt="" />
       </Link>
+
+      </div>
       <Link to={'/Checkout'}>
         <div className="Header-checkout">
           {/* <i className="fas fa-shopping-basket" /> */}

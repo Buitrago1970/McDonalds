@@ -97,11 +97,12 @@
 @media (max-width: 650px) {
   .Checkout {
     grid-template-columns: 1fr;
-    margin-top: 100px;
+    margin-top: 20px;
     grid-gap: 0;
   }
   .Checkout-sidebar {
     grid-area: 1/1/2/2;
+    padding: 20px 13px;
   }
 }
 @media (max-width: 410px) {
